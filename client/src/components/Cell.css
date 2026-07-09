@@ -1,0 +1,62 @@
+.cell {
+
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid #bfc7d5;
+
+    border-radius: 6px;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+    font-size: 20px;
+
+}
+
+.cell:hover {
+
+    background: #dbeafe;
+
+}
+
+.cell.water {
+
+    background: #bfdbfe;
+
+    color: #2563eb;
+
+}
+
+.cell.hit {
+
+    background: #fca5a5;
+
+    color: #991b1b;
+
+}
+
+.cell.sunk {
+
+    background: #111827;
+
+    color: white;
+
+}
+
+.cell.ship {
+
+    background: #6b7280;
+
+    color: white;
+
+}
+
+.cell:disabled {
+
+    cursor: default;
+
+}
