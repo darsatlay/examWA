@@ -106,22 +106,18 @@ export async function fireTorpedo(matchId, row, col) {
 
         await increaseShipsSunk(matchId);
 
-        const updatedGame = await loadGame(matchId);
+const updatedMatch = await getMatchById(matchId);
 
-        if (
-            updatedGame.match.ships_sunk >=
-            updatedGame.match.ships_total
-        ) {
+if (updatedMatch.ships_sunk === updatedMatch.ships_total) {
 
-            await finishMatch(matchId, "won");
+    await finishMatch(matchId, "won");
 
-            return {
-                result: "hit and sunk",
-                gameOver: true
-            };
+    return {
+        result: "won",
+        gameOver: true
+    };
 
-        }
-
+}
         return {
             result: "hit and sunk",
             gameOver: false

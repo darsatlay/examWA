@@ -46,23 +46,24 @@ export function getMatchById(matchId) {
 
     return new Promise((resolve, reject) => {
 
-        const sql = `
-            SELECT
-                match_id AS id,
-                user_id,
-                tournament_id,
-                difficulty,
-                game_mode,
-                grid_size,
-                torpedoes_initial,
-                torpedoes_left,
-                ships_total,
-                result,
-                started_at,
-                finished_at
-            FROM matches
-            WHERE match_id = ?
-        `;
+       const sql = `
+    SELECT
+        match_id AS id,
+        user_id,
+        tournament_id,
+        difficulty,
+        game_mode,
+        grid_size,
+        torpedoes_initial,
+        torpedoes_left,
+        ships_total,
+        ships_sunk,
+        result,
+        started_at,
+        finished_at
+    FROM matches
+    WHERE match_id = ?
+`;
         db.get(sql, [matchId], (err, row) => {
 
             if (err)
@@ -89,6 +90,7 @@ export function getMatchesByUser(userId) {
                 torpedoes_initial,
                 torpedoes_left,
                 ships_total,
+                ships_sunk,
                 result,
                 started_at,
                 finished_at
