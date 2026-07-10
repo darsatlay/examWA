@@ -20,6 +20,6 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "react-router-dom": "^7.18.1",
-    "sqlite3": "sqlite3@5.1.6"
+    "sqlite3": "^5.1.6"
   }
 }
