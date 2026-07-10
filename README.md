@@ -422,13 +422,13 @@ Displays all matches played by the authenticated player.
 
 ## Screenshot
 
-![Screenshot](.screen/screen 2026-07-09 234629.png)
-![Screenshot](.screen/screen2 2026-07-09 234659.png)
+![Screenshot1](.screen/game.png)
+![Screenshot2](.screen/homepage.png)
 
 ## Users Credentials
 
-- alice, pass (plus any other requested info)
-- dasha, pass (plus any other requested info)
+- alice, password
+- dasha, pass
 Also you can create new user
 
 ## Use of AI Tools
