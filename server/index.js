@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 3001;
 app.use(morgan("dev"));
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://examwa-4.onrender.com/",
     credentials: true
 }));
 
